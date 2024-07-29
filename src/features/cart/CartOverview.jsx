@@ -9,8 +9,9 @@ function CartOverview() {
   const totalCartPrice = useSelector(getTotalPrice);
 
   if (!totalCartQuantity) return null;
+  
   return (
-    <div className="flex items-center justify-between bg-zinc-700 p-4 text-xs uppercase text-stone-200 sm:text-xl">
+    <div className="fixed bottom-0 left-0 right-0 flex items-center justify-between bg-zinc-700 p-4 text-xs uppercase text-stone-200 sm:text-xl">
       <p className="space-x-3">
         <span>{totalCartQuantity} pizzas</span>
         <span className="font-semibold">{formatCurrency(totalCartPrice)}</span>
