@@ -4,7 +4,7 @@ import MenuItem from './MenuItem';
 
 function Menu() {
   const menu = useLoaderData();
-  
+
   return (
     <section>
       <div className="border-2">
@@ -17,7 +17,9 @@ function Menu() {
       </div>
 
       <div className="mx-auto max-w-3xl">
-        <ul className="divide-y divide-stone-400 p-4 pb-[5rem]"> {/* Added padding-bottom */}
+        <ul className="divide-y divide-stone-400 p-4 pb-[5rem]">
+          {' '}
+          {/* Added padding-bottom */}
           {menu.map((pizza) => (
             <MenuItem pizza={pizza} key={pizza.id} />
           ))}
