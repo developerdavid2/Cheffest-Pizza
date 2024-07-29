@@ -1,0 +1,21 @@
+{
+  "extends": ["react-app", "plugin:stylelint/recommended"],
+  "plugins": ["react", "stylelint"],
+  "rules": {
+    "react/prop-types": 0,
+    "no-unused-vars": "off",
+    "stylelint/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "layer"
+        ]
+      }
+    ]
+  }
+}

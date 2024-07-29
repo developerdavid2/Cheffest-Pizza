@@ -1,0 +1,68 @@
+/* stylelint-disable at-rule-no-unknown */
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+/* Your CSS code with Tailwind at-rules */
+/* eslint-disable-next-line */
+/* eslint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply rounded-lg border-0 border-stone-300 px-4 py-2 text-sm ring-1 ring-inset ring-gray-300 transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-inset focus:ring-orange-300 md:px-6 md:py-3;
+  }
+}
+
+/* stylelint-enable at-rule-no-unknown */ /* Optionally re-enable the rule after the relevant code */
+
+body {
+  font-family: 'SF Pro Dislay', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  background-color: #f7f7f7;
+  color: #444;
+}
+
+/* https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75;
+  --c: no-repeat linear-gradient(theme(colors.zinc.600) 0 0);
+  background:
+    var(--c) 0% 50%,
+    var(--c) 50% 50%,
+    var(--c) 100% 50%;
+  background-size: 20% 50%;
+  animation: loading 1s infinite linear;
+}
+
+.accounted-height {
+  min-height: calc(100% + -40px);
+}
+
+@keyframes loading {
+  20% {
+    background-position:
+      0% 0%,
+      50% 50%,
+      100% 50%;
+  }
+  40% {
+    background-position:
+      0% 100%,
+      50% 0%,
+      100% 50%;
+  }
+  60% {
+    background-position:
+      0% 50%,
+      50% 100%,
+      100% 0%;
+  }
+  80% {
+    background-position:
+      0% 50%,
+      50% 50%,
+      100% 100%;
+  }
+}
